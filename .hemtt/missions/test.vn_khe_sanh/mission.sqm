@@ -8,14 +8,14 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=22;
+		nextID=25;
 	};
 	class Camera
 	{
-		pos[]={5097.7393,373.43417,5387.1118};
-		dir[]={-0.84398919,-0.46414781,-0.26887459};
-		up[]={-0.44225621,0.88575017,-0.14089192};
-		aside[]={-0.30355224,2.7828355e-07,0.9528392};
+		pos[]={10967.729,560.85864,10196.111};
+		dir[]={0.45526648,-0.17172296,0.87377554};
+		up[]={0.079388514,0.98512149,0.15236303};
+		aside[]={0.88696921,1.7964849e-06,-0.4621518};
 	};
 };
 binarizationWanted=0;
@@ -52,7 +52,8 @@ class Mission
 	class Intel
 	{
 		timeOfChanges=1800.0002;
-		startWeather=0.30000001;
+		startWeather=1;
+		startFog=0.068393014;
 		startWind=0.1;
 		startWaves=0.1;
 		forecastWeather=0.30000001;
@@ -63,10 +64,10 @@ class Mission
 		windForced=1;
 		year=2035;
 		month=6;
-		day=24;
-		hour=19;
-		minute=10;
-		startFogDecay=0.014;
+		hour=18;
+		minute=22;
+		startFogBase=658.47668;
+		startFogDecay=0.0071159634;
 		forecastFogDecay=0.014;
 	};
 	class Entities
