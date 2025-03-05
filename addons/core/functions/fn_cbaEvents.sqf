@@ -29,15 +29,24 @@
 [
     "#All",
     "WATCH",
-    LLSTRING(request_ron),
+    LLSTRING(ron_request),
     nil,
-    nil,
-    {true},
+    PATH_TO_ADDON(logo.paa),
+    [
+        {
+            params ["_unit", "_container", "_item", "_slot", "_params"];
+            leader _unit isEqualTo _unit && { [] call FUNC(isNight) }
+        },
+        {
+            params ["_unit", "_container", "_item", "_slot", "_params"];
+            leader _unit isEqualTo _unit && { [] call FUNC(isNight) }
+        }
+    ],
     {
         params ["_unit", "_container", "_item", "_slot", "_params"];
-        systemChat str [name _unit, typeOf _container, _item, _slot, _params];
-        true
+        if ([getPos _unit] call FUNC(canRON)) then { [_unit] call FUNC(ron_request) };
+
     },
     false,
-    [0,1,2]
+    []
 ] call CBA_fnc_addItemContextMenuOption;

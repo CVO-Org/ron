@@ -2,33 +2,33 @@
 <Project name="vn_ron">
     <Package name="vn_ron">
         <Container name="UX">
-            <Key ID="STR_vn_ron_core_request_ron">
+            <Key ID="str_vn_ron_core_ron_request">
                 <English>Attempt to Remain Over Night</English>
             </Key>
         </Container>
         <Container name="CBA_Settings">
-            <Key ID="STR_vn_ron_core_set_enable">
+            <Key ID="str_vn_ron_core_set_enable">
                 <English>Enable Interruptions</English>
             </Key>
-            <Key ID="STR_vn_ron_core_set_enable_desc">
+            <Key ID="str_vn_ron_core_set_enable_desc">
                 <English>Enable Interruptions during RON.</English>
             </Key>
-            <Key ID="STR_vn_ron_core_set_interruption_chance_max">
+            <Key ID="str_vn_ron_core_set_interruption_chance_max">
                 <English>Maximal Chance</English>
             </Key>
-            <Key ID="STR_vn_ron_core_set_interruption_chance_max_desc">
+            <Key ID="str_vn_ron_core_set_interruption_chance_max_desc">
                 <English>Maximal Chance for interruptions to occour.</English>
             </Key>
-            <Key ID="STR_vn_ron_core_set_interruption_chance_min">
+            <Key ID="str_vn_ron_core_set_interruption_chance_min">
                 <English>Minimal Chance</English>
             </Key>
-            <Key ID="STR_vn_ron_core_set_interruption_chance_min_desc">
+            <Key ID="str_vn_ron_core_set_interruption_chance_min_desc">
                 <English>Minimal Chance for interruptions to occour.</English>
             </Key>
-            <Key ID="STR_vn_ron_core_set_interruption_enemy_outer_radius">
+            <Key ID="str_vn_ron_core_set_interruption_enemy_outer_radius">
                 <English>Enemy Presence - Outer Radius</English>
             </Key>
-            <Key ID="STR_vn_ron_core_set_interruption_enemy_outer_radius_desc">
+            <Key ID="str_vn_ron_core_set_interruption_enemy_outer_radius_desc">
                 <English>Enemy groups inside this radius will be taken into account when calculating the interruption chance.</English>
             </Key>
             <Key ID="str_vn_ron_core_set_interruption_enemy_classes">
@@ -93,13 +93,13 @@
             </Key>
         </Container>
         <Container name="CBA_Settings_Categories">
-            <Key ID="STR_vn_ron_core_set_cat_Condition">
+            <Key ID="str_vn_ron_core_set_cat_Condition">
                 <English>Condition</English>
             </Key>
-            <Key ID="STR_vn_ron_core_set_cat_Interruption">
+            <Key ID="str_vn_ron_core_set_cat_Interruption">
                 <English>Interruption</English>
             </Key>
-            <Key ID="STR_vn_ron_core_set_cat_main">
+            <Key ID="str_vn_ron_core_set_cat_main">
                 <English>SOGPF - Remain Over Night</English>
             </Key>
         </Container>
