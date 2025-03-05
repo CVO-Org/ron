@@ -24,4 +24,8 @@ parameters = [
 
 [Test]
 extends = "default"
-mission = "test.VR"
+mission = "test.vn_khe_sanh"
+dlc = [
+    "vn"
+]
+ 

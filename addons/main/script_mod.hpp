@@ -1,7 +1,7 @@
-#define MAINPREFIX ~MAINPREFIX~
-#define PREFIX ~PREFIX~
+#define MAINPREFIX zrn
+#define PREFIX vn_ron
 
-#define PREFIX_BEAUTIFIED ~PREFIX~
+#define PREFIX_BEAUTIFIED vn_ron
 
 
 #include "script_version.hpp"

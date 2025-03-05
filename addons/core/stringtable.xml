@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="vn_ron">
+    <Package name="vn_ron">
+        <Container name="CBA_Settings">
+            <Key ID="STR_vn_ron_core_set_enable">
+                <Original>Enable Interruptions</Original>
+            </Key>
+            <Key ID="STR_vn_ron_core_set_enable_desc">
+                <English>Enable Interruptions during RON.</English>
+            </Key>
+            <Key ID="STR_vn_ron_core_set_enable">
+                <Original>Minimal Chance for Inter</Original>
+            </Key>
+            <Key ID="STR_vn_ron_core_set_enable_desc">
+                <English>Enable Interruptions during RON.</English>
+            </Key>
+        </Container>
+        <Container name="CBA_Settings_Categories">
+            <Key ID="STR_vn_ron_core_set_cat_main">
+                <Original>SOGPF - Remain Over Night</Original>
+                <English>SOGPF - Remain Over Night</English>
+            </Key>
+            <Key ID="STR_vn_ron_core_set_cat_Interruption">
+                <Original>Interruption</Original>
+                <English>Interruption</English>
+            </Key>
+        </Container>
+    </Package>
+</Project>

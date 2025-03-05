@@ -1,0 +1,251 @@
+version=54;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	class ItemIDProvider
+	{
+		nextID=22;
+	};
+	class Camera
+	{
+		pos[]={5097.7393,373.43417,5387.1118};
+		dir[]={-0.84398919,-0.46414781,-0.26887459};
+		up[]={-0.44225621,0.88575017,-0.14089192};
+		aside[]={-0.30355224,2.7828355e-07,0.9528392};
+	};
+};
+binarizationWanted=0;
+sourceName="test";
+addons[]=
+{
+	"characters_f_vietnam_c"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=1;
+		class Item0
+		{
+			className="characters_f_vietnam_c";
+			name="characters_f_vietnam_c";
+			author="Savage Game Design";
+			url="https://www.arma3.com";
+		};
+	};
+};
+dlcs[]=
+{
+	"VN"
+};
+randomSeed=14645499;
+class ScenarioData
+{
+	author="Overlord Zorn";
+};
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		wavesForced=1;
+		windForced=1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=19;
+		minute=10;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
+	};
+	class Entities
+	{
+		items=2;
+		class Item0
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5130.4771,305.14111,5483.542};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						isPlayer=1;
+					};
+					id=1;
+					type="vn_b_men_sog_08";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5128.7998,305.10748,5483.873};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=17;
+					type="vn_b_men_sog_08";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5127.394,305.10172,5483.9458};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=19;
+					type="vn_b_men_sog_08";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5126.1484,305.09885,5483.9922};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=21;
+					type="vn_b_men_sog_08";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=0;
+		};
+		class Item1
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=5;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5046.7378,303.75143,5354.0186};
+						angles[]={0,4.5414009,0};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+						rank="SERGEANT";
+					};
+					id=9;
+					type="vn_o_men_vc_local_03";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5052.9873,303.75607,5354.9072};
+						angles[]={0,4.5414009,0};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+					};
+					id=10;
+					type="vn_o_men_vc_local_14";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5035.8247,303.75143,5356.1758};
+						angles[]={0,4.5414009,0};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+					};
+					id=11;
+					type="vn_o_men_vc_local_09";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5040.7515,303.75143,5357.0269};
+						angles[]={0,4.5414009,0};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+					};
+					id=12;
+					type="vn_o_men_vc_local_11";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5045.6787,303.75143,5357.8774};
+						angles[]={0,4.5414009,0};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+					};
+					id=13;
+					type="vn_o_men_vc_local_07";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=8;
+		};
+	};
+};
