@@ -6,16 +6,15 @@ class CfgFunctions
         {
             file = PATH_TO_FUNC;
 
-            class aceAction { postInit = 1; };
             class cbaEvents { preInit = 1; };
-            class define { preInit = 1; };
             class suppressionHandler { preInit = 1; };
 
-            class condition {};        
-            
-            class gradientTimeAcc {};
 
             class isNight {};
+            class canRON {};        
+
+            class hint {};
+            class gradientTimeAcc {};
 
             class ron_request {};
             class ron_run {};
@@ -24,13 +23,17 @@ class CfgFunctions
 
             class interruption {};
             class interrupt_chance {};
+            class nearbyUnits {};
 
             class watch_display {};
             class watch_fade {};
+        };
 
-            class nearbyUnits {};
-
-            class hint {};
+        class action
+        {
+            file = PATH_TO_FUNC_SUB(action);
+            class action_cond {};
+            class action_state {};
         };
     };
 };

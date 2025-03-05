@@ -55,12 +55,12 @@ QSET(test) -> "ADDON_set_test"
 
 
 [
-	QSET(interruption_enemyPresence_radius),				//    _setting     - Unique setting name. Matches resulting variable name <STRING>
+	QSET(interruption_enemy_outer_radius),				//    _setting     - Unique setting name. Matches resulting variable name <STRING>
 	"SLIDER",								//    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
-	SETLSTRING(interruption_enemyPresence_radius),
+	SETLSTRING(interruption_enemy_outer_radius),
 											//    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
 	[LSTRING(set_cat_main), LSTRING(set_cat_Interruption)],				//    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
-	[100, 3500, 1000, 0],					//    _valueInfo   - Extra properties of the setting depending of _settingType. See examples below <ANY>
+	[500, 3500, 1000, 0],					//    _valueInfo   - Extra properties of the setting depending of _settingType. See examples below <ANY>
 	1,										//    _isGlobal    - 1: all clients share the same setting, 2: setting can't be overwritten (optional, default: 0) <NUMBER>
 	{},										//    _script      - Script to execute when setting is changed. (optional) <CODE>
 	false									//    _needRestart - Setting will be marked as needing mission restart after being changed. (optional, default false) <BOOL>
@@ -68,12 +68,12 @@ QSET(test) -> "ADDON_set_test"
 
 
 [
-	QSET(interruption_enemy_distance),		//    _setting     - Unique setting name. Matches resulting variable name <STRING>
+	QSET(interruption_enemy_inner_radius),		//    _setting     - Unique setting name. Matches resulting variable name <STRING>
 	"SLIDER",								//    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
-	SETLSTRING(interruption_enemy_distance),
+	SETLSTRING(interruption_enemy_inner_radius),
 											//    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
-	[LSTRING(set_cat_main), LSTRING(set_cat_Interruption)],				//    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
-	[100, 500, 100, 0],						//    _valueInfo   - Extra properties of the setting depending of _settingType. See examples below <ANY>
+	[LSTRING(set_cat_main), LSTRING(set_cat_Condition)],				//    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
+	[100, 500, 150, 0],						//    _valueInfo   - Extra properties of the setting depending of _settingType. See examples below <ANY>
 	1,										//    _isGlobal    - 1: all clients share the same setting, 2: setting can't be overwritten (optional, default: 0) <NUMBER>
 	{},										//    _script      - Script to execute when setting is changed. (optional) <CODE>
 	false									//    _needRestart - Setting will be marked as needing mission restart after being changed. (optional, default false) <BOOL>
@@ -84,7 +84,7 @@ PVAR(interruption_enemy_sides) = [];
 [
 	QSET(interruption_enemy_side_east),		//    _setting     - Unique setting name. Matches resulting variable name <STRING>
 	"CHECKBOX",								//    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
-	SETLSTRING(east),
+	SETLSTRING(interruption_enemy_side_east),
 											//    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
 	[LSTRING(set_cat_main), LSTRING(set_cat_Interruption)],				//    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
 	true,									//    _valueInfo   - Extra properties of the setting depending of _settingType. See examples below <ANY>
@@ -103,7 +103,7 @@ PVAR(interruption_enemy_sides) = [];
 [
 	QSET(interruption_enemy_side_west),		//    _setting     - Unique setting name. Matches resulting variable name <STRING>
 	"CHECKBOX",								//    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
-	SETLSTRING(west),
+	SETLSTRING(interruption_enemy_side_west),
 											//    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
 	[LSTRING(set_cat_main), LSTRING(set_cat_Interruption)],				//    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
 	false,									//    _valueInfo   - Extra properties of the setting depending of _settingType. See examples below <ANY>
@@ -122,7 +122,7 @@ PVAR(interruption_enemy_sides) = [];
 [
 	QSET(interruption_enemy_side_guer),		//    _setting     - Unique setting name. Matches resulting variable name <STRING>
 	"CHECKBOX",								//    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
-	SETLSTRING(independent),
+	SETLSTRING(interruption_enemy_side_guer),
 											//    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
 	[LSTRING(set_cat_main), LSTRING(set_cat_Interruption)],				//    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
 	false,									//    _valueInfo   - Extra properties of the setting depending of _settingType. See examples below <ANY>
@@ -176,7 +176,7 @@ PVAR(interruption_enemy_size) = [3, 10];
 	"EDITBOX",								//    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
 	SETLSTRING(interruption_location_types),
 											//    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
-	[LSTRING(set_cat_main), LSTRING(set_cat_Interruption)],				//    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
+	[LSTRING(set_cat_main), LSTRING(set_cat_Condition)],				//    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
 	"NameLocal, NameVillage",				//    _valueInfo   - Extra properties of the setting depending of _settingType. See examples below <ANY>
 	1,										//    _isGlobal    - 1: all clients share the same setting, 2: setting can't be overwritten (optional, default: 0) <NUMBER>
 	{
@@ -191,7 +191,7 @@ PVAR(interruption_enemy_size) = [3, 10];
 	"SLIDER",								//    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
 	SETLSTRING(interruption_location_distance),
 											//    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
-	[LSTRING(set_cat_main), LSTRING(set_cat_Interruption)],				//    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
+	[LSTRING(set_cat_main), LSTRING(set_cat_Condition)],				//    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
 	[100, 1000, 300, 0],					//    _valueInfo   - Extra properties of the setting depending of _settingType. See examples below <ANY>
 	1,										//    _isGlobal    - 1: all clients share the same setting, 2: setting can't be overwritten (optional, default: 0) <NUMBER>
 	{},										//    _script      - Script to execute when setting is changed. (optional) <CODE>
@@ -200,11 +200,11 @@ PVAR(interruption_enemy_size) = [3, 10];
 
 
 [
-	QSET(suppress_lastSuppressed_delta),		//    _setting     - Unique setting name. Matches resulting variable name <STRING>
+	QSET(suppress_supressed_cooldown),		//    _setting     - Unique setting name. Matches resulting variable name <STRING>
 	"SLIDER",								//    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
-	SETLSTRING(suppress_lastSuppressed_delta),
+	SETLSTRING(suppress_supressed_cooldown),
 											//    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
-	[LSTRING(set_cat_main)],				//    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
+	[LSTRING(set_cat_main), LSTRING(set_cat_Condition)],				//    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
 	[60, 600, 180, 0],						//    _valueInfo   - Extra properties of the setting depending of _settingType. See examples below <ANY>
 	1,										//    _isGlobal    - 1: all clients share the same setting, 2: setting can't be overwritten (optional, default: 0) <NUMBER>
 	{},										//    _script      - Script to execute when setting is changed. (optional) <CODE>

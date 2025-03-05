@@ -22,3 +22,22 @@
 
 [ QPVAR(EH_hint), FUNC(hint) ] call CBA_fnc_addEventHandler;
 
+
+
+// CBA Context Menu Action
+
+[
+    "#All",
+    "WATCH",
+    LLSTRING(request_ron),
+    nil,
+    nil,
+    {true},
+    {
+        params ["_unit", "_container", "_item", "_slot", "_params"];
+        systemChat str [name _unit, typeOf _container, _item, _slot, _params];
+        true
+    },
+    false,
+    [0,1,2]
+] call CBA_fnc_addItemContextMenuOption;

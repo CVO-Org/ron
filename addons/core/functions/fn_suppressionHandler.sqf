@@ -18,7 +18,7 @@
 if !(isServer) exitWith {};
 
 // Define GVAR on Mission Start
-missionNamespace setVariable [QPVAR(suppress_lastSuppressed), -1 * SET(suppress_lastSuppressed_delta)];
+missionNamespace setVariable [QPVAR(suppress_lastSuppressed), -1 * SET(suppress_supressed_cooldown)];
 
 
 // Adds the Eventhandler to every playerObject
@@ -44,7 +44,7 @@ addMissionEventHandler [
 
 // Broadcast updated QPVAR(suppress_inContact) state only when the state changes
 [{
-    private _delta = missionNamespace getVariable [QSET(suppress_lastSuppressed_delta), 300];
+    private _delta = missionNamespace getVariable [QSET(suppress_supressed_cooldown), 300];
     private _newState = (PVAR(suppress_lastSuppressed) + _delta) > CBA_missionTime;
     private _previousState = missionNamespace getVariable [QPVAR(suppress_inContact), false];
     if (_previousState isNotEqualTo _newState) then { missionNamespace setVariable [QPVAR(suppress_inContact), _newState, true] };

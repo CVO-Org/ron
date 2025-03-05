@@ -52,7 +52,7 @@ if (count ( _allPlayers ) != 0) then {
 };
 
 // Check for enemies nearby
-if ( count ( [_pos, PVAR(interruption_enemy_sides), SET(interruption_enemy_distance) ] call FUNC(nearbyUnits) ) != 0 ) then {
+if ( count ( [_pos, PVAR(interruption_enemy_sides), SET(interruption_enemy_inner_radius) ] call FUNC(nearbyUnits) ) != 0 ) then {
     _canRON = false;
     systemChat "You dont feel safe here...";
 };
