@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="vn_ron">
     <Package name="vn_ron">
-        <Container name="UX">
-            <Key ID="str_vn_ron_core_ron_request">
-                <English>Attempt to Remain Over Night</English>
-            </Key>
-        </Container>
         <Container name="CBA_Settings">
             <Key ID="str_vn_ron_core_set_enable">
                 <English>Enable Interruptions</English>
@@ -25,12 +20,6 @@
             <Key ID="str_vn_ron_core_set_interruption_chance_min_desc">
                 <English>Minimal Chance for interruptions to occour.</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_interruption_enemy_outer_radius">
-                <English>Enemy Presence - Outer Radius</English>
-            </Key>
-            <Key ID="str_vn_ron_core_set_interruption_enemy_outer_radius_desc">
-                <English>Enemy groups inside this radius will be taken into account when calculating the interruption chance.</English>
-            </Key>
             <Key ID="str_vn_ron_core_set_interruption_enemy_classes">
                 <English>Enemy Unit Classnames</English>
             </Key>
@@ -42,6 +31,12 @@
             </Key>
             <Key ID="str_vn_ron_core_set_interruption_enemy_inner_radius_desc">
                 <English>Enemy units inside this radius will block the RON action.</English>
+            </Key>
+            <Key ID="str_vn_ron_core_set_interruption_enemy_outer_radius">
+                <English>Enemy Presence - Outer Radius</English>
+            </Key>
+            <Key ID="str_vn_ron_core_set_interruption_enemy_outer_radius_desc">
+                <English>Enemy groups inside this radius will be taken into account when calculating the interruption chance.</English>
             </Key>
             <Key ID="str_vn_ron_core_set_interruption_enemy_side_east">
                 <English>Enemy Side - East</English>
@@ -101,6 +96,11 @@
             </Key>
             <Key ID="str_vn_ron_core_set_cat_main">
                 <English>SOGPF - Remain Over Night</English>
+            </Key>
+        </Container>
+        <Container name="UX">
+            <Key ID="str_vn_ron_core_ron_request">
+                <English>Attempt to Remain Over Night</English>
             </Key>
         </Container>
     </Package>
