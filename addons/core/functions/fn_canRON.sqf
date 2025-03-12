@@ -45,7 +45,17 @@ if (count (nearestLocations [_pos, PVAR(interruption_location_types), SET(interr
 
 
 // All Squadmembers( or all players? what about zeus? What about ded people at base?) need to be within 50m of the RON Site.
-private _allPlayers = call BIS_fnc_listPlayers select { _x distance2D (getMarkerPos "btc_base") > 1000 } select { (_x distance2D _pos) > 25 };
+private _blacklist_posCheck = missionNamespace getVariable [QPVAR(blacklist_playerDistance), createHashMap];
+
+private _allPlayers = call BIS_fnc_listPlayers;
+{
+    private _markerName = _x;
+    private _radius = _y;
+    _allPlayers = _allPlayers select { _x distance2D (getMarkerPos _markerName) > _radius };
+} forEach _blacklist_posCheck;
+
+_allPlayers = _allPlayers select { (_x distance2D _pos) > 25 };
+
 if (count ( _allPlayers ) != 0) then {
     _canRON = false;
     systemChat format ["The following players are to far away from the RON Site: %1", _allPlayers apply { name _x } joinString ", "];
