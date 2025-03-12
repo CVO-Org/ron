@@ -12,9 +12,10 @@ Several Conditions are being checked when attempting to RON
 - It needs to be night time between sunset and sunrise.
 **Further Checks**
 - All players need to be within a certain range to the Initiator
-- Minimum Distance to nearby Enemies
-- Minimum Distance to nearby Villages
+- Outside of Minimum Distance to nearby Enemies
+- Outside of Minimum Distance to nearby Villages
 - No player has been under fire (suppressed) for a certain amount of time
+
 
 ## Dependencies
 ### DLC
@@ -30,7 +31,7 @@ This mods needs to be loaded on both, the server and all clients.
 
 ## Planned Features
 - Instead of all players needing to be near the Initiator, they only need to be near their squadleader.
-- Integration of Blacklisted Areas. Bascially means that, if the player is within a certain area (Position & Range), they will not be accounted for the proximity check. (For example, at spawn/base )
+~~- Integration of Blacklisted Areas. Bascially means that, if the player is within a certain area (Position & Range), they will not be accounted for the proximity check. (For example, at spawn/base )~~ Implemented
 
 ## Maybe Features
 - Predefined area's for RON Spots, meaning RON only possible at these locations
@@ -42,3 +43,31 @@ This mods needs to be loaded on both, the server and all clients.
 https://steamcommunity.com/sharedfiles/filedetails/?id=3438988923
 ### Github
 https://github.com/OverlordZorn/vn-ron
+
+
+
+
+## For Mission Makers And Zeus
+
+### How to blacklist area's from the "are all players nearby" check
+useful for homebase / respawn area or similar.
+
+```sqf
+missionNamespace setVariable [
+    "nv_ron_blacklist_playerDistance",
+    createHashMapFromArray [
+        // [markerName as String, radius of blacklist]
+        ["ourHomebaseMarkerName", 500],
+        ["ourRespawnAreaMarkerName", 1000]
+    ],
+    true
+];
+```
+
+### How to overwrite the Interruption Chance Check:
+```sqf
+missionNamespace setVariable [
+    "vn_ron_interruption_overwrite",
+    true, // boolean: True will always trigger an interruption, false will always cause RON to pass without interruption
+    true
+];
