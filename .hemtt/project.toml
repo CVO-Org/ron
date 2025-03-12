@@ -1,11 +1,11 @@
 mainprefix = "zrn"     # Ideally, replace "zrn" across the whole repo with your mod's mainprefix, example "t" (without the "")
 prefix = "vn_ron"             # Ideally, replace "vn_ron" across the whole repo with your mod's prefix, example "mod" (without the "") 
 
-name = "Example Mod"
+name = "Remain Over Night System"
 
 [properties]
-author = "Derp Derpington"
-url = "https://github.com/Derpington"
+author = "OverlordZorn"
+url = "https://github.com/OverlordZorn"
 
 [binarize]
 enabled = true # Default: true
