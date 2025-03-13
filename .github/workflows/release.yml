@@ -15,8 +15,8 @@
 name: Release
 
 env:
-  FOLDER: # '@vn_ron'
-  WORKSHOPID: # '3438988923'
+  FOLDER: '@vn_ron'
+  WORKSHOPID: '3438988923'
 
 on:
   release:
