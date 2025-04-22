@@ -1,5 +1,7 @@
 # RemainOverNight System
 
+[![Steam Subscriptions](https://img.shields.io/steam/subscriptions/3438988923?style=for-the-badge&logo=steam&label=Steam%20Workshop&color=%23690000)](https://steamcommunity.com/sharedfiles/filedetails/?id=3438988923)
+
 This mod provides the players with a system that allows them to initialises a Remain Over Night Time Skip themselves, no Zeus shenanigans needed.
 
 It also supports "Interruptions", meaning the players RON attempt could be interrupted by an enemy patrol strolling by.
