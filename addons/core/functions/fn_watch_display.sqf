@@ -17,6 +17,10 @@
 
 params [ ["_enable", false, [false] ] ];
 
+
+private _sogLoaded = isClass (configFile >> "CfgPatches" >> "missions_f_vietnam");
+
+
 switch (_enable) do {
     case true:  {
         createDialog "RscDisplaySOGWatch";
