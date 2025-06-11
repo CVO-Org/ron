@@ -1,8 +1,8 @@
-#include "../script_component.hpp"
+#include "../../script_component.hpp"
 
 /*
 * Author: Zorn
-* global hint function for cba Events
+* Starts the Main Function
 *
 * Arguments:
 *
@@ -15,8 +15,6 @@
 * Public: No
 */
 
-if !(hasInterface) exitWith {};
+params ["_requester"];
 
-params ["_text"];
-
-systemChat _text;
+[ QPVAR(EH_ron_run), [_requester] ] call CBA_fnc_serverEvent;

@@ -5,5 +5,5 @@
 #define COMPONENT_BEAUTIFIED Core
 
 
-#include "\zrn\vn_ron\addons\main\script_mod.hpp"
-#include "\zrn\vn_ron\addons\main\script_macros.hpp"
+#include "\zrn\ron\addons\main\script_mod.hpp"
+#include "\zrn\ron\addons\main\script_macros.hpp"

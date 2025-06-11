@@ -2,7 +2,7 @@
 
 /*
 * Author: Zorn
-* Function to Check the condition of the ACE Action
+* global hint function for cba Events
 *
 * Arguments:
 *
@@ -15,5 +15,8 @@
 * Public: No
 */
 
-params ["_player"];
-leader _player isEqualTo _player && { [] call FUNC(checkTimeFrame) }
+if !(hasInterface) exitWith {};
+
+params ["_text"];
+
+systemChat _text;

@@ -1,4 +1,4 @@
-#include "../script_component.hpp"
+#include "../../script_component.hpp"
 
 /*
 * Author: Zorn
@@ -23,7 +23,7 @@ params ["_pos"];
 // Request can only be made by the SL
 
 // Current Daytime between Sunset and Sunrise
-[] call vn_ron_fnc_isNight
+[] call ron_fnc_isNight
 */
 
 private _canRON = true;
@@ -41,7 +41,7 @@ if ( missionNamespace getVariable [QPVAR(suppress_didRONRecently), false] isEqua
 if ( missionNamespace getVariable [QPVAR(suppress_inContact), false] isEqualTo true ) then { _canRON = false; systemChat "You're not sure, if you were able to shake the enemies" };
 
 // Distance from nearest village > 500 "NameLocal","NameVillage"
-if (count (nearestLocations [_pos, PVAR(interruption_location_types), SET(interruption_location_distance)]) != 0) then { _canRON = false; systemChat "You're too close to a village" };
+if ((nearestLocations [_pos, PVAR(interruption_location_types), SET(interruption_location_distance)]) isNotEqualTo []) then { _canRON = false; systemChat "You're too close to a village" };
 
 
 // All Squadmembers( or all players? what about zeus? What about ded people at base?) need to be within 50m of the RON Site.

@@ -65,7 +65,7 @@ missionNamespace setVariable [
 ### How to overwrite the Interruption Chance Check:
 ```sqf
 missionNamespace setVariable [
-    "vn_ron_interruption_overwrite",
+    "ron_interruption_overwrite",
     true, // boolean: True will always trigger an interruption, false will always cause RON to pass without interruption
     true
 ];

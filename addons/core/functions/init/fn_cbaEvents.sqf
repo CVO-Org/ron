@@ -1,4 +1,4 @@
-#include "../script_component.hpp"
+#include "../../script_component.hpp"
 
 /*
 * Author: Zorn
@@ -22,6 +22,8 @@
 
 [ QPVAR(EH_hint), FUNC(hint) ] call CBA_fnc_addEventHandler;
 
+[ QPVAR(EH_remote), { (_this#0) call (_this#1) }] call CBA_fnc_addEventHandler;
+
 
 
 // CBA Context Menu Action
@@ -35,11 +37,11 @@
     [
         {
             params ["_unit", "_container", "_item", "_slot", "_params"];
-            leader _unit isEqualTo _unit && { [] call FUNC(isNight) }
+            leader _unit isEqualTo _unit && { [] call FUNC(checkTimeFrame) }
         },
         {
             params ["_unit", "_container", "_item", "_slot", "_params"];
-            leader _unit isEqualTo _unit && { [] call FUNC(isNight) }
+            leader _unit isEqualTo _unit && { [] call FUNC(checkTimeFrame) }
         }
     ],
     {
@@ -50,3 +52,4 @@
     false,
     []
 ] call CBA_fnc_addItemContextMenuOption;
+
