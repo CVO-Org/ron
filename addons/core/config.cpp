@@ -39,3 +39,8 @@ class CfgVehicles
 {
     #include "AceActions.hpp"
 };
+
+#include "UI\BaseControls.hpp"
+class RscTitles {
+    #include "UI\RscDigitalClock.hpp"
+};
