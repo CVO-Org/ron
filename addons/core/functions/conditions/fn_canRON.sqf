@@ -45,7 +45,7 @@ if ((nearestLocations [_pos, PVAR(interruption_location_types), SET(interruption
 
 
 // All Squadmembers( or all players? what about zeus? What about ded people at base?) need to be within 50m of the RON Site.
-private _blacklist_posCheck = missionNamespace getVariable [QPVAR(blacklist_playerDistance), createHashMap];
+private _blacklist_posCheck = missionNamespace getVariable [QPVAR(api_blacklist_playerDistance), createHashMap];
 
 private _allPlayers = call BIS_fnc_listPlayers;
 {

@@ -34,7 +34,7 @@
 
 if !(SET(interruption_enabled)) exitWith {false};
 
-if (!isNil QPVAR(interruption_overwrite) && { PVAR(interruption_overwrite) isEqualType true }) exitWith { PVAR(interruption_overwrite) };
+if (!isNil QPVAR(api_interruption_overwrite) && { PVAR(api_interruption_overwrite) isEqualType true }) exitWith { PVAR(api_interruption_overwrite) };
 
 params ["_requester"];
 
