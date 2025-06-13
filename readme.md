@@ -20,13 +20,13 @@ Several Conditions are being checked when attempting to RON
 
 
 ## Dependencies
-### DLC
-SOG:Prarie Fire
 ### Mods
 CBA_A3
 
 ## Supported Mods
 ACE3
+### Supported DLCs
+SOG:Prarie Fire
 
 ## Server Requirements
 This mods needs to be loaded on both, the server and all clients.
@@ -52,7 +52,7 @@ useful for homebase / respawn area or similar.
 
 ```sqf
 missionNamespace setVariable [
-    "nv_ron_blacklist_playerDistance",
+    "ron_api_blacklist_playerDistance",
     createHashMapFromArray [
         // [markerName as String, radius of blacklist]
         ["ourHomebaseMarkerName", 500],
@@ -65,7 +65,33 @@ missionNamespace setVariable [
 ### How to overwrite the Interruption Chance Check:
 ```sqf
 missionNamespace setVariable [
-    "ron_interruption_overwrite",
-    true, // boolean: True will always trigger an interruption, false will always cause RON to pass without interruption
+    "ron_api_interruption_overwrite",
+    true, // boolean - true: force interruption - false: force no interuption
     true
 ];
+```
+
+### How to block the RON Action
+```sqf
+missionNamespace setVariable [
+    "ron_api_block",
+    true, // type or value does not matter
+    true
+];
+```
+```sqf
+missionNamespace setVariable [
+    "ron_api_block",
+    nil, // nil'ing the var on every client will remove the block
+    true
+];
+```
+### Custom Mode: Target Time
+Target time for the Custom RON Mode
+```sqf
+missionNamespace setVariable [
+    "ron_api_custom_targetTime",
+    6.5, // number - 0..24 - reference: https://community.bistudio.com/wiki/dayTime
+    true
+];
+
