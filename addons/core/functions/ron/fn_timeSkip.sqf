@@ -10,7 +10,7 @@
 * None
 *
 * Example:
-* ['something', player] call prefix_component_fnc_functionname
+* ['something', player] call ron_core_fnc_functionname
 *
 * Public: No
 */
@@ -47,13 +47,13 @@ if (_interrupted) then {
 
 };
 
-[ CBA_fnc_globalEvent , [QPVAR(EH_hint), [_hint]], 25 ] call CBA_fnc_waitAndExecute;
+[ CBA_fnc_globalEvent , [QGVAR(EH_hint), [_hint]], 25 ] call CBA_fnc_waitAndExecute;
 
 // If overcast is above a certain value, it will reduce the current overcast over the next 15 minutes
 // and only then it will take readjust the overcast to the previous value
 if (overcast > 0.5 || {overcastForecast > 0.5}) then {
-    [QPVAR(EH_remote), [[], { 15*60 setOvercast 0.25 }] ] call CBA_fnc_serverEvent;
-    [ CBA_fnc_serverEvent , [QPVAR(EH_remote), [[], { nextWeatherChange setOvercast random 0.5 }] ], 15*60] call CBA_fnc_waitAndExecute;
+    [QGVAR(EH_remote), [[], { 15*60 setOvercast 0.25 }] ] call CBA_fnc_serverEvent;
+    [ CBA_fnc_serverEvent , [QGVAR(EH_remote), [[], { nextWeatherChange setOvercast random 0.5 }] ], 15*60] call CBA_fnc_waitAndExecute;
 };
 
 nil

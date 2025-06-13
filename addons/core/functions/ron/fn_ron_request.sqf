@@ -10,11 +10,11 @@
 * None
 *
 * Example:
-* ['something', player] call prefix_component_fnc_functionname
+* ['something', player] call ron_core_fnc_functionname
 *
 * Public: No
 */
 
 params ["_requester"];
 
-[ QPVAR(EH_ron_run), [_requester] ] call CBA_fnc_serverEvent;
+[ QGVAR(EH_ron_run), [_requester] ] call CBA_fnc_serverEvent;

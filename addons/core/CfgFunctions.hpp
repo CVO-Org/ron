@@ -16,7 +16,7 @@ class CfgFunctions
 
         class init {
             file = PATH_TO_FUNC_SUB(init);
-            class cbaEvents { preInit = 1; };
+            class preInit { preInit = 1; };
             class suppressionHandler { preInit = 1; };
 
             class legacyAPI { postInit = 1; };
@@ -36,10 +36,14 @@ class CfgFunctions
             class timeSkip {};
         };
 
-        class watch {
-            file = PATH_TO_FUNC_SUB(watch);
-            class watch_display {};
-            class watch_fade {};
+        class transition {
+            file = PATH_TO_FUNC_SUB(transition);
+
+            class watch_client {};
+
+            class basic_fade {};
+
+            class sog_watch {};
         };
 
         class interruption {
