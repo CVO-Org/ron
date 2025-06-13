@@ -17,7 +17,7 @@
 
 [ QGVAR(EH_ron_run), FUNC(ron_run) ] call CBA_fnc_addEventHandler;
 
-[QGVAR(EH_watch_client), FUNC(watch_client)] call CBA_fnc_addEventHandler;
+[QGVAR(EH_watch), FUNC(watch_client)] call CBA_fnc_addEventHandler;
 [ QGVAR(EH_basic_fade), FUNC(basic_fade) ] call CBA_fnc_addEventHandler;
 
 [ QGVAR(EH_hint), FUNC(hint) ] call CBA_fnc_addEventHandler;

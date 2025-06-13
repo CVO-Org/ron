@@ -22,9 +22,6 @@ params [
     ["_duration", 15, [0]]
 ];
 
-diag_log format ['[zrn](debug)(fn_gradientTimeAcc) _this: %1', _this];
-
-
 _timeAcc_tgt = _timeAcc_tgt max 0.1 min 120;
 
 private _timeAcc_cur = timeMultiplier;

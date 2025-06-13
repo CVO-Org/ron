@@ -12,10 +12,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5163.2275,350.22592,5492.6128};
-		dir[]={-0.67449212,-0.51851165,-0.52577913};
-		up[]={-0.40896255,0.85504502,-0.31879115};
-		aside[]={-0.61488026,5.338341e-06,0.78880692};
+		pos[]={5254.8057,415.06219,5431.1372};
+		dir[]={-0.78139651,-0.58394092,0.22061607};
+		up[]={-0.56198388,0.81177628,0.15867023};
+		aside[]={0.27176121,5.9150625e-06,0.96251917};
 	};
 };
 binarizationWanted=0;
@@ -52,11 +52,11 @@ class Mission
 	class Intel
 	{
 		timeOfChanges=1800.0002;
-		startWeather=1;
+		startWeather=0;
 		startFog=0.068393014;
 		startWind=0.1;
 		startWaves=0.1;
-		forecastWeather=0.30000001;
+		forecastWeather=0;
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
@@ -67,7 +67,7 @@ class Mission
 		hour=18;
 		minute=22;
 		startFogBase=658.47668;
-		startFogDecay=0.0071159634;
+		startFogDecay=0.0099929282;
 		forecastFogDecay=0.014;
 	};
 	class Entities
@@ -162,7 +162,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5046.7378,303.75143,5354.0186};
+						position[]={4489.9141,182.91516,5056.5601};
 						angles[]={0,4.5414009,0};
 					};
 					side="East";
@@ -179,7 +179,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5052.9873,303.75607,5354.9072};
+						position[]={4496.1636,182.81651,5057.4487};
 						angles[]={0,4.5414009,0};
 					};
 					side="East";
@@ -190,13 +190,14 @@ class Mission
 					};
 					id=10;
 					type="vn_o_men_vc_local_14";
+					atlOffset=-1.5258789e-05;
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5035.8247,303.75143,5356.1758};
+						position[]={4479.001,183.12379,5058.7173};
 						angles[]={0,4.5414009,0};
 					};
 					side="East";
@@ -213,7 +214,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5040.7515,303.75143,5357.0269};
+						position[]={4483.9277,182.94025,5059.5684};
 						angles[]={0,4.5414009,0};
 					};
 					side="East";
@@ -230,7 +231,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5045.6787,303.75143,5357.8774};
+						position[]={4488.855,182.82712,5060.4189};
 						angles[]={0,4.5414009,0};
 					};
 					side="East";

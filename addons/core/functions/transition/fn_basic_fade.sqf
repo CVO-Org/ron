@@ -17,7 +17,7 @@
 
 params [
     [ "_mode",     "", [""] ],
-    [ "_duration", 5,  [""] ]
+    [ "_duration", 5,  [0]  ]
 ];
 
 switch (toUpper _mode) do {

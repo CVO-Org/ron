@@ -46,7 +46,7 @@ private _previousTimeAcc = timeMultiplier;
 
 
 // ## Transitions
-private _showWatch = missionNamespace getVariable [QSET(showWatch), false];
+private _showWatch = true; //missionNamespace getVariable [QSET(showWatch), false];
 
 
 private _mode = switch (true) do {
