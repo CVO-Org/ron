@@ -46,10 +46,12 @@
     ],
     {
         params ["_unit", "_container", "_item", "_slot", "_params"];
-        if ([getPos _unit] call FUNC(canRON)) then { [_unit] call FUNC(ron_request) };
+        if ([getPos _unit] call FUNC(canRON)) then {
+            [_unit] call FUNC(ron_request);
+            (findDisplay 602) closeDisplay 2;
+        };
 
     },
     false,
     []
 ] call CBA_fnc_addItemContextMenuOption;
-
