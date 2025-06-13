@@ -33,7 +33,7 @@ This mods needs to be loaded on both, the server and all clients.
 
 ## Planned Features
 - Instead of all players needing to be near the Initiator, they only need to be near their squadleader.
-~~- Integration of Blacklisted Areas. Bascially means that, if the player is within a certain area (Position & Range), they will not be accounted for the proximity check. (For example, at spawn/base )~~ Implemented
+- ~~Integration of Blacklisted Areas. Bascially means that, if the player is within a certain area (Position & Range), they will not be accounted for the proximity check. (For example, at spawn/base )~~ Implemented
 
 ## Maybe Features
 - Predefined area's for RON Spots, meaning RON only possible at these locations
