@@ -18,6 +18,8 @@ class CfgFunctions
             file = PATH_TO_FUNC_SUB(init);
             class cbaEvents { preInit = 1; };
             class suppressionHandler { preInit = 1; };
+
+            class legacyAPI { postInit = 1; };
         };
 
         class ron {
