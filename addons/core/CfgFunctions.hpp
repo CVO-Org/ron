@@ -43,6 +43,8 @@ class CfgFunctions
 
             class basic_fade {};
 
+            class updateDigitalTime {};
+
             class sog_watch {};
         };
 
