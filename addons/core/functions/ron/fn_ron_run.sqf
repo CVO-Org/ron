@@ -29,8 +29,6 @@ params ["_requester"];
 
 private _previousTimeAcc = timeMultiplier;
 
-
-
 // ## Time Acceleration and Time Skip
 // 1. Accelerate Time: Start@2: Duration:10
 [ FUNC(gradientTimeAcc), [120, 14], 2 ] call CBA_fnc_waitAndExecute;
@@ -48,6 +46,8 @@ private _previousTimeAcc = timeMultiplier;
 // ## Transitions
 private _showWatch = missionNamespace getVariable [QSET(showWatch), false];
 
+// until better default solution:
+_showWatch = _showWatch && { isClass (configFile >> "CfgPatches" >> "missions_f_vietnam") };
 
 private _mode = switch (true) do {
     case (_showWatch ): { "WATCH" };
