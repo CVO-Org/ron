@@ -26,5 +26,7 @@ private _code = switch (true) do {
     default { {} };
 };
 
+if (_code isEqualTo {}) exitWith {};
+
 [_mode, _args] call _code;
 
