@@ -43,9 +43,8 @@ if (SET(showWatch) && { isClass (configFile >> "CfgPatches" >> "missions_f_vietn
 } else {
 
     switch (_transition) do {
-        case "TOBLACK":   { [QPVAR(bis_blackScreen), true, _duration] call BIS_fnc_blackOut; };
-        case "FROMBLACK": { [QPVAR(bis_blackScreen), true, _duration] call BIS_fnc_blackIn;  };
+        case "TOBLACK":   { [QPVAR(bi_blackscreen), true, _duration] call BIS_fnc_blackOut; };
+        case "FROMBLACK": { [QPVAR(bi_blackscreen), true, _duration] call BIS_fnc_blackIn;  };
         default {};
     };
-
 };
