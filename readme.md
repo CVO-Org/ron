@@ -42,7 +42,7 @@ This mods needs to be loaded on both, the server and all clients.
 
 ## Links
 - [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3438988923)
-- [Github](https://github.com/OverlordZorn/vn-ron)
+- [Github](https://github.com/CVO-Org/vn-ron)
 
 
 ## For Mission Makers And Zeus
