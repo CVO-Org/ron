@@ -109,17 +109,17 @@
             </Key>
         </Container>
         <Container name="CBA_Settings_Categories">
-            <Key ID="str_ron_core_set_cat_Condition">
-                <English>Condition</English>
+            <Key ID="str_ron_core_set_cat_1general">
+                <English>1. General</English>
             </Key>
-            <Key ID="str_ron_core_set_cat_General">
-                <English>General</English>
+            <Key ID="str_ron_core_set_cat_2mode">
+                <English>2. Mode</English>
             </Key>
-            <Key ID="str_ron_core_set_cat_Interruption">
-                <English>Interruption</English>
+            <Key ID="str_ron_core_set_cat_3Condition">
+                <English>3. Condition</English>
             </Key>
-            <Key ID="str_ron_core_set_cat_Mode">
-                <English>Mode</English>
+            <Key ID="str_ron_core_set_cat_4Interruption">
+                <English>4. Interruption</English>
             </Key>
             <Key ID="str_ron_core_set_cat_main">
                 <English>Remain Over Night</English>
