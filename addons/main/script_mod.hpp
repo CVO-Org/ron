@@ -1,7 +1,7 @@
 #define MAINPREFIX zrn
-#define PREFIX vn_ron
+#define PREFIX ron
 
-#define PREFIX_BEAUTIFIED vn_ron
+#define PREFIX_BEAUTIFIED Remain Over Night
 
 
 #include "script_version.hpp"

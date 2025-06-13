@@ -1,105 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="vn_ron">
-    <Package name="vn_ron">
+<Project name="ron">
+    <Package name="ron">
         <Container name="CBA_Settings">
-            <Key ID="str_vn_ron_core_set_enable">
+            <Key ID="str_ron_core_set_disableUserInput">
+                <English>Disable User Inputs</English>
+            </Key>
+            <Key ID="str_ron_core_set_disableUserInput_desc">
+                <English>Disables the users inputs during the watch overlay...</English>
+            </Key>
+            <Key ID="str_ron_core_set_enable">
                 <English>Enable Interruptions</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_enable_desc">
+            <Key ID="str_ron_core_set_enable_desc">
                 <English>Enable Interruptions during RON.</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_interruption_chance_max">
+            <Key ID="str_ron_core_set_interruption_chance_max">
                 <English>Maximal Chance</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_interruption_chance_max_desc">
+            <Key ID="str_ron_core_set_interruption_chance_max_desc">
                 <English>Maximal Chance for interruptions to occour.</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_interruption_chance_min">
+            <Key ID="str_ron_core_set_interruption_chance_min">
                 <English>Minimal Chance</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_interruption_chance_min_desc">
+            <Key ID="str_ron_core_set_interruption_chance_min_desc">
                 <English>Minimal Chance for interruptions to occour.</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_interruption_enemy_classes">
+            <Key ID="str_ron_core_set_interruption_enemy_classes">
                 <English>Enemy Unit Classnames</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_interruption_enemy_classes_desc">
+            <Key ID="str_ron_core_set_interruption_enemy_classes_desc">
                 <English>Defines the Classnames of enemy Units to spawn during an interruption.</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_interruption_enemy_inner_radius">
+            <Key ID="str_ron_core_set_interruption_enemy_inner_radius">
                 <English>Enemy Presence - Inner Radius</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_interruption_enemy_inner_radius_desc">
+            <Key ID="str_ron_core_set_interruption_enemy_inner_radius_desc">
                 <English>Enemy units inside this radius will block the RON action.</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_interruption_enemy_outer_radius">
+            <Key ID="str_ron_core_set_interruption_enemy_outer_radius">
                 <English>Enemy Presence - Outer Radius</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_interruption_enemy_outer_radius_desc">
+            <Key ID="str_ron_core_set_interruption_enemy_outer_radius_desc">
                 <English>Enemy groups inside this radius will be taken into account when calculating the interruption chance.</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_interruption_enemy_side_east">
+            <Key ID="str_ron_core_set_interruption_enemy_side_east">
                 <English>Enemy Side - East</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_interruption_enemy_side_east_desc">
+            <Key ID="str_ron_core_set_interruption_enemy_side_east_desc">
                 <English>Defines the Sides which are considered enemy.</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_interruption_enemy_side_guer">
+            <Key ID="str_ron_core_set_interruption_enemy_side_guer">
                 <English>Enemy Side - Indipendent</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_interruption_enemy_side_guer_desc">
+            <Key ID="str_ron_core_set_interruption_enemy_side_guer_desc">
                 <English>Defines the Sides which are considered enemy.</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_interruption_enemy_side_west">
+            <Key ID="str_ron_core_set_interruption_enemy_side_west">
                 <English>Enemy Side - West</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_interruption_enemy_side_west_desc">
+            <Key ID="str_ron_core_set_interruption_enemy_side_west_desc">
                 <English>Defines the Sides which are considered enemy.</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_interruption_enemy_size_max">
+            <Key ID="str_ron_core_set_interruption_enemy_size_max">
                 <English>Group Size - Max</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_interruption_enemy_size_max_desc">
+            <Key ID="str_ron_core_set_interruption_enemy_size_max_desc">
                 <English>Defines the maximal size of the enemy group during an interruption.</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_interruption_enemy_size_min">
+            <Key ID="str_ron_core_set_interruption_enemy_size_min">
                 <English>Group Size - Min</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_interruption_enemy_size_min_desc">
+            <Key ID="str_ron_core_set_interruption_enemy_size_min_desc">
                 <English>Defines the minimal size of the enemy group during an interruption.</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_interruption_location_distance">
+            <Key ID="str_ron_core_set_interruption_location_distance">
                 <English>Location Distance</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_interruption_location_distance_desc">
+            <Key ID="str_ron_core_set_interruption_location_distance_desc">
                 <English>Defines the distance to locations needed, to be able to start a RON.</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_interruption_location_types">
+            <Key ID="str_ron_core_set_interruption_location_types">
                 <English>Location Types</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_interruption_location_types_desc">
+            <Key ID="str_ron_core_set_interruption_location_types_desc">
                 <English>Defines the types of Locations which will affect the player's ability to start a RON.</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_suppress_supressed_cooldown">
+            <Key ID="str_ron_core_set_suppress_supressed_cooldown">
                 <English>Suppression - Cooldown</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_suppress_supressed_cooldown_desc">
+            <Key ID="str_ron_core_set_suppress_supressed_cooldown_desc">
                 <English>Defines the time in seconds, for which any player may not be shot at, before they can start a RON.</English>
+            </Key>
+            <Key ID="str_ron_core_set_timeFrame_Mode">
+                <English>Mode</English>
+            </Key>
+            <Key ID="str_ron_core_set_timeFrame_Mode_desc">
+                <English>Defines when a timeskip can be done.\n1. Night to Sunrise: Start RON between sunset and sunrise. Skip to Sunrise.\n2. Night to Sunrise: Start RON between sunrise and sunset. Skip to Sunset.\n3. Custom: Can start anytime, will skip to api defined time.</English>
+            </Key>
+            <Key ID="str_ron_core_set_timeFrame_mode_1_NightToSunrise">
+                <English>1. Night to Sunrise</English>
+            </Key>
+            <Key ID="str_ron_core_set_timeFrame_mode_2_DayToSunset">
+                <English>2. Day to Sunset</English>
+            </Key>
+            <Key ID="str_ron_core_set_timeFrame_mode_3_Custom">
+                <English>3. Always to fixed time (custom)</English>
             </Key>
         </Container>
         <Container name="CBA_Settings_Categories">
-            <Key ID="str_vn_ron_core_set_cat_Condition">
-                <English>Condition</English>
+            <Key ID="str_ron_core_set_cat_1general">
+                <English>1. General</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_cat_Interruption">
-                <English>Interruption</English>
+            <Key ID="str_ron_core_set_cat_2mode">
+                <English>2. Mode</English>
             </Key>
-            <Key ID="str_vn_ron_core_set_cat_main">
-                <English>SOGPF - Remain Over Night</English>
+            <Key ID="str_ron_core_set_cat_3Condition">
+                <English>3. Condition</English>
+            </Key>
+            <Key ID="str_ron_core_set_cat_4Interruption">
+                <English>4. Interruption</English>
+            </Key>
+            <Key ID="str_ron_core_set_cat_main">
+                <English>Remain Over Night</English>
             </Key>
         </Container>
         <Container name="UX">
-            <Key ID="str_vn_ron_core_ron_request">
+            <Key ID="str_ron_core_ron_request">
                 <English>Attempt to Remain Over Night</English>
             </Key>
         </Container>

@@ -2,7 +2,7 @@
 
 /*
 * Author: Zorn
-* Statement Function of the ACE Action
+* Starts the Main Function
 *
 * Arguments:
 *
@@ -15,5 +15,6 @@
 * Public: No
 */
 
-params ["_player"];
-if ([getPos _player] call FUNC(canRON)) then { [_player] call FUNC(ron_request) };
+params ["_requester"];
+
+[ QGVAR(EH_ron_run), [_requester] ] call CBA_fnc_serverEvent;

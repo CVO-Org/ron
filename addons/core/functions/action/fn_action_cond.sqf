@@ -10,10 +10,10 @@
 * None
 *
 * Example:
-* ['something', player] call prefix_component_fnc_functionname
+* ['something', player] call ron_core_fnc_functionname
 *
 * Public: No
 */
 
 params ["_player"];
-leader _player isEqualTo _player && { [] call FUNC(isNight) }
+leader _player isEqualTo _player && { [] call FUNC(checkTimeFrame) }
