@@ -234,7 +234,7 @@ PVAR(interruption_enemy_size) = [3, 10];
 	SETLSTRING(timeFrame_Mode),
 											//    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
 	[LSTRING(set_cat_main), LSTRING(set_cat_2mode)],				//    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
-	[["NIGHT", "DAY", "CUSTOM"], [LSTRING(set_timeFrame_NightToSunrise), LSTRING(set_timeFrame_DayToSunset), LSTRING(set_timeFrame_Custom)], 0],
+	[["NIGHT", "DAY", "CUSTOM"], [LSTRING(set_timeFrame_mode_1_NightToSunrise), LSTRING(set_timeFrame_mode_2_DayToSunset), LSTRING(set_timeFrame_mode_3_Custom)], 0],
 											//    _valueInfo   - Extra properties of the setting depending of _settingType. See examples below <ANY>
 	1,										//    _isGlobal    - 1: all clients share the same setting, 2: setting can't be overwritten (optional, default: 0) <NUMBER>
 	{},										//    _script      - Script to execute when setting is changed. (optional) <CODE>
