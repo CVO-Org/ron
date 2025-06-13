@@ -28,4 +28,6 @@ private _targetTime = switch (SET(timeFrame_Mode)) do {
 
 if (isNil "_targetTime") exitWith { ERROR_1("TargetTime could not be established - mode unkown: %1",SET(timeFrame_Mode)); random 24 };
 
+_targetTime = 0 max _targetTime min 24;
+
 if (_targetTime < _curr ) then { _targetTime + 24 - _curr } else { _targetTime - _curr } // return
