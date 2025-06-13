@@ -46,6 +46,8 @@ class CfgFunctions
             class updateDigitalTime {};
 
             class sog_watch {};
+
+            class digital_client {};
         };
 
         class interruption {
