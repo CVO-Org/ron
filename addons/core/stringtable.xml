@@ -92,20 +92,20 @@
             <Key ID="str_ron_core_set_suppress_supressed_cooldown_desc">
                 <English>Defines the time in seconds, for which any player may not be shot at, before they can start a RON.</English>
             </Key>
-            <Key ID="str_ron_core_set_timeFrame_Custom">
-                <English>Always to fixed time (custom)</English>
-            </Key>
-            <Key ID="str_ron_core_set_timeFrame_DayToSunset">
-                <English>Day to Sunset</English>
-            </Key>
             <Key ID="str_ron_core_set_timeFrame_Mode">
                 <English>Mode</English>
             </Key>
             <Key ID="str_ron_core_set_timeFrame_Mode_desc">
-                <English>Defines the time in seconds, for which any player may not be shot at, before they can start a RON.</English>
+                <English>Defines when a timeskip can be done.\n1. Night to Sunrise: Start RON between sunset and sunrise. Skip to Sunrise.\n2. Night to Sunrise: Start RON between sunrise and sunset. Skip to Sunset.\n3. Custom: Can start anytime, will skip to api defined time.</English>
             </Key>
-            <Key ID="str_ron_core_set_timeFrame_NightToSunrise">
-                <English>Night to Sunrise</English>
+            <Key ID="str_ron_core_set_timeFrame_mode_1_NightToSunrise">
+                <English>1. Night to Sunrise</English>
+            </Key>
+            <Key ID="str_ron_core_set_timeFrame_mode_2_DayToSunset">
+                <English>2. Day to Sunset</English>
+            </Key>
+            <Key ID="str_ron_core_set_timeFrame_mode_3_Custom">
+                <English>3. Always to fixed time (custom)</English>
             </Key>
         </Container>
         <Container name="CBA_Settings_Categories">
