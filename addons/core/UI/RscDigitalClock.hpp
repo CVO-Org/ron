@@ -13,7 +13,7 @@ class PVAR(RscDigitalClock) {
             type = 13;	            // defined constant
             style = 2;				// defined constant
             colorBackground[] = { 0, 0, 0, 0.0 };
-            x = 1.3;
+            x = 1.0;
             y = 0.75;
             w = 0.3;
             h = 0.1;
@@ -24,7 +24,7 @@ class PVAR(RscDigitalClock) {
             {
                 font = "LCD14";
                 color = "#ff0000";
-                align = "center";
+                align = "right";
                 valign = "middle";
                 shadow = "0";
                 shadowColor = "#000000";
