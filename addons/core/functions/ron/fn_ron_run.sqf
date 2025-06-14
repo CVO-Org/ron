@@ -43,31 +43,26 @@ setTimeMultiplier 1;
 
 // Fade Audio
 [CBA_fnc_globalEvent, [ QGVAR(EH_fadeEnvironment),["FADEOUT", 7]], 22] call CBA_fnc_waitAndExecute;
-[CBA_fnc_globalEvent, [ QGVAR(EH_fadeEnvironment),["FADEIN", 7]], 31] call CBA_fnc_waitAndExecute;
+[CBA_fnc_globalEvent, [ QGVAR(EH_fadeEnvironment),[ "FADEIN", 7]], 31] call CBA_fnc_waitAndExecute;
 
 
 // ## Transitions
-private _showWatch = missionNamespace getVariable [QSET(showWatch), false];
-
-private _mode = switch (true) do {
-    case (_showWatch && { isClass (configFile >> "CfgPatches" >> "missions_f_vietnam") } ): { "WATCH" };
-    case (_showWatch ): { "DIGITAL" };
-    default { "NONE" };
-};
+private _mode = missionNamespace getVariable [QSET(displayMode), "DIGITAL"];
+// Temp: Default to "DIGITAL" when SOG not loaded.
+if (_mode == "WATCH" && { !isClass (configFile >> "CfgPatches" >> "missions_f_vietnam") }) then { _mode = "DIGITAL" };
 
 switch (_mode) do {
     case "DIGITAL": {
         [CBA_fnc_globalEvent, [ QGVAR(EH_digital), [ "Ron_RscDigitalClock_layer", true, 2 ] ], 0.1] call CBA_fnc_waitAndExecute;
-        [CBA_fnc_globalEvent, [ QGVAR(EH_basic_fade), [ "TOBLACK",   14 ] ], 15] call CBA_fnc_waitAndExecute;
+        [CBA_fnc_globalEvent, [ QGVAR(EH_basic_fade), [   "TOBLACK", 14 ] ], 15] call CBA_fnc_waitAndExecute;
         [CBA_fnc_globalEvent, [ QGVAR(EH_basic_fade), [ "FROMBLACK", 14 ] ], 31] call CBA_fnc_waitAndExecute;
         [CBA_fnc_globalEvent, [ QGVAR(EH_digital), [ "Ron_RscDigitalClock_layer", false, 2 ] ], 58] call CBA_fnc_waitAndExecute;
-
     };
     case "WATCH": {
         [CBA_fnc_globalEvent, [ QGVAR(EH_watch), [ "watch_display", [true]                          ] ],  2] call CBA_fnc_waitAndExecute;
-        [CBA_fnc_globalEvent, [ QGVAR(EH_watch), [ "watch_fade",    ["TOBLACK",   "BACKGROUND", 10] ] ],  5] call CBA_fnc_waitAndExecute;
-        [CBA_fnc_globalEvent, [ QGVAR(EH_watch), [ "watch_fade",    ["TOBLACK",   "OVERLAY",    14] ] ], 15] call CBA_fnc_waitAndExecute;
-        [CBA_fnc_globalEvent, [ QGVAR(EH_watch), [ "watch_fade",    ["FROMBLACK", "OVERLAY",    14] ] ], 31] call CBA_fnc_waitAndExecute;
+        [CBA_fnc_globalEvent, [ QGVAR(EH_watch), [ "watch_fade",    [  "TOBLACK", "BACKGROUND", 10] ] ],  5] call CBA_fnc_waitAndExecute;
+        [CBA_fnc_globalEvent, [ QGVAR(EH_watch), [ "watch_fade",    [  "TOBLACK",    "OVERLAY", 14] ] ], 15] call CBA_fnc_waitAndExecute;
+        [CBA_fnc_globalEvent, [ QGVAR(EH_watch), [ "watch_fade",    ["FROMBLACK",    "OVERLAY", 14] ] ], 31] call CBA_fnc_waitAndExecute;
         [CBA_fnc_globalEvent, [ QGVAR(EH_watch), [ "watch_fade",    ["FROMBLACK", "BACKGROUND", 10] ] ], 45] call CBA_fnc_waitAndExecute;
         [CBA_fnc_globalEvent, [ QGVAR(EH_watch), [ "watch_display", [true]                          ] ], 60] call CBA_fnc_waitAndExecute;
     };

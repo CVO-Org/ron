@@ -51,5 +51,3 @@ private _delay = 0.5;
     };
 }, _delay, [_codeToRun, _exitCode, _parameters, _condition]] call CBA_fnc_addPerFrameHandler;
 
-
-

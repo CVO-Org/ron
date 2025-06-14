@@ -6,7 +6,22 @@
                 <English>Disable User Inputs</English>
             </Key>
             <Key ID="str_ron_core_set_disableUserInput_desc">
-                <English>Disables the users inputs during the watch overlay...</English>
+                <English>Disables the users inputs during the watch overlay.\nThis prevents the user to use sth like Ace Interaction to break the watch-overlay.</English>
+            </Key>
+            <Key ID="str_ron_core_set_displayMode">
+                <English>Watch Mode</English>
+            </Key>
+            <Key ID="str_ron_core_set_displayMode_desc">
+                <English>Defines which type of watch is displayed.\n1. As of current version, if "WATCH" is selected but SOGPF is not loaded, it will default to digital.</English>
+            </Key>
+            <Key ID="str_ron_core_set_displayMode_mode_1_watch">
+                <English>Analog Watch</English>
+            </Key>
+            <Key ID="str_ron_core_set_displayMode_mode_2_digital">
+                <English>Digital Watch</English>
+            </Key>
+            <Key ID="str_ron_core_set_displayMode_mode_3_none">
+                <English>None</English>
             </Key>
             <Key ID="str_ron_core_set_enable">
                 <English>Enable Interruptions</English>
