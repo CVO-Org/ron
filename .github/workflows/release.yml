@@ -17,6 +17,7 @@ name: Release
 env:
   FOLDER: '@ron'
   WORKSHOPID: '3438988923'
+  WORKSHOPNAME: 'RemainOverNight'
 
 on:
   release:
@@ -31,6 +32,14 @@ jobs:
     steps:
         - name: Set VERSION env
           run: echo VERSION=${GITHUB_REF:11} >> $GITHUB_ENV
+
+        - name: Create meta.cpp for release
+          shell: pwsh
+          run: |
+            & "${{ github.workspace }}/tools/create-meta-cpp.ps1" `
+              -FilePath "${{ github.workspace }}/meta.cpp" `
+              -PublishedId "${{ env.WORKSHOPID }}" `
+              -ModName "${{ env.WORKSHOPNAME }}"
 
         - name: Checkout the source code
           uses: actions/checkout@v2
