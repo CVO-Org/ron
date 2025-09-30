@@ -1,16 +1,16 @@
 class PVAR(RscDigitalClock) {
 
-	idd = -1;
+    idd = -1;
     duration = 9999;
     //fadeIn = 3;
     //fadeOut = 3;
     onLoad = Q(uiNamespace setVariable [ARR_2(QQPVAR(RscDigitalClock),_this select 0)]; [_this select 0] call FUNC(updateDigitalTime));
 
-	class Controls {
+    class Controls {
         class DigitalClockStructuredText: RscStructuredText {
             idc = 1;
-            type = 13;	            // defined constant
-            style = 2;				// defined constant
+            type = 13;                // defined constant
+            style = 2;                // defined constant
             colorBackground[] = { 0, 0, 0, 0.0 };
             x = "safezoneX + 0.85 * safezoneW - 0.30";
             y = "safezoneY + 0.75 * safezoneH - 0.15";
@@ -30,7 +30,7 @@ class PVAR(RscDigitalClock) {
                 size = "1";
             };
         };
-	};
+    };
 
-	class ControlsBackground {};
+    class ControlsBackground {};
 };
