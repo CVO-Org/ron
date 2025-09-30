@@ -33,6 +33,15 @@ jobs:
         - name: Set VERSION env
           run: echo VERSION=${GITHUB_REF:11} >> $GITHUB_ENV
 
+        - name: Checkout the source code
+          uses: actions/checkout@v2
+
+        - name: Update script_version.hpp from release tag
+          shell: pwsh
+          run: |
+            & "${{ github.workspace }}/tools/update-version.ps1" `
+              -Version "${{ github.event.release.tag_name }}"
+              
         - name: Create meta.cpp for release
           shell: pwsh
           run: |
@@ -40,9 +49,6 @@ jobs:
               -FilePath "${{ github.workspace }}/meta.cpp" `
               -PublishedId "${{ env.WORKSHOPID }}" `
               -ModName "${{ env.WORKSHOPNAME }}"
-
-        - name: Checkout the source code
-          uses: actions/checkout@v2
 
         - name: Setup HEMTT
           uses: arma-actions/hemtt@v1
