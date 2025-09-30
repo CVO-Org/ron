@@ -28,13 +28,13 @@ private _timeAcc_cur = timeMultiplier;
 
 
 private _codeToRun = {
-        setTimeMultiplier linearConversion [ _this#0, _this#1, CBA_missionTime, _this#2, _this#3, true ];
+        setTimeMultiplier linearConversion [ _this select 0, _this select 1, CBA_missionTime, _this select 2, _this select 3, true ];
 };
-private _exitCode = { setTimeMultiplier (_this#3) };
+private _exitCode = { setTimeMultiplier (_this select 3) };
 
 private _startTime = CBA_missionTime;
 private _endTime = CBA_missionTime + _duration;
-private _condition = { (_this#1) > CBA_missionTime };
+private _condition = { (_this select 1) > CBA_missionTime };
 private _parameters = [_startTime, _endTime, _timeAcc_cur, _timeAcc_tgt];
 
 private _delay = 0.5;
