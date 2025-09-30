@@ -24,7 +24,7 @@
 
 [ QGVAR(EH_hint), FUNC(hint) ] call CBA_fnc_addEventHandler;
 
-[ QGVAR(EH_remote), { (_this#0) call (_this#1) }] call CBA_fnc_addEventHandler;
+[ QGVAR(EH_remote), { (_this select 0) call (_this select 1) }] call CBA_fnc_addEventHandler;
 
 [QGVAR(EH_fadeEnvironment), {
     params ["_mode", "_duration"];
