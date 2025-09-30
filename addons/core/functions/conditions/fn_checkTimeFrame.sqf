@@ -21,9 +21,7 @@
 // example: missionNamespace setVariable["ron_API_block", nil, true]; // To un-block
 
 isNil QPVAR(API_block)
-
 &&
-
 {
     date call BIS_fnc_sunriseSunsetTime params ["_sunrise", "_sunset"];
     private _curr = dayTime; 
