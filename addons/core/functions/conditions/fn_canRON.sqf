@@ -34,11 +34,11 @@ private _canRON = true;
 if ( missionNamespace getVariable [QPVAR(suppress_gotInterrupted), false] isEqualTo true ) exitWith { systemChat "Make sure there is no threat first!"; false };
 
 // Didnt RON recently....
-if ( missionNamespace getVariable [QPVAR(suppress_didRONRecently), false] isEqualTo true ) then { _canRON = false; systemChat "You already did RON!" };
+if ( SET(condition_didRonRecently) && { missionNamespace getVariable [QPVAR(condition_didRONRecently), false] } ) then { _canRON = false; systemChat "You already did RON!" };
 
 
 // Not in contact (based on suppressed Eventhandler)
-if ( missionNamespace getVariable [QPVAR(suppress_inContact), false] isEqualTo true ) then { _canRON = false; systemChat "You're not sure, if you were able to shake the enemies" };
+if ( missionNamespace getVariable [QPVAR(condition_inContact), false] isEqualTo true ) then { _canRON = false; systemChat "You're not sure, if you were able to shake the enemies" };
 
 // Distance from nearest village > 500 "NameLocal","NameVillage"
 if ((nearestLocations [_pos, PVAR(interruption_location_types), SET(interruption_location_distance)]) isNotEqualTo []) then { _canRON = false; systemChat "You're too close to a village" };
