@@ -23,7 +23,7 @@ parameters = [
 ]
 
 
-[test]
+[vn]
 extends = "default"
 mission = "test.vn_khe_sanh"
 dlc = [
