@@ -24,8 +24,11 @@
 // 3. 45-58:     Deccelerate Time
 // 3. @60:      Hide Watch
 
+
+
 params ["_requester"];
 
+missionNamespace setVariable [QGVAR(RONinProgress), true, true];
 
 private _previousTimeAcc = timeMultiplier;
 
@@ -71,3 +74,5 @@ switch (_mode) do {
         [CBA_fnc_globalEvent, [ QGVAR(EH_basic_fade), [ "FROMBLACK", 14 ] ], 31] call CBA_fnc_waitAndExecute;
     };
 };
+
+[{ missionNamespace setVariable [QGVAR(RONinProgress), nil, true] }, [''], 90] call CBA_fnc_waitAndExecute;
