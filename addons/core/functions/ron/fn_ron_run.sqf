@@ -60,6 +60,7 @@ switch (_mode) do {
         [CBA_fnc_globalEvent, [ QGVAR(EH_basic_fade), [   "TOBLACK", 14 ] ], 15] call CBA_fnc_waitAndExecute;
         [CBA_fnc_globalEvent, [ QGVAR(EH_basic_fade), [ "FROMBLACK", 14 ] ], 31] call CBA_fnc_waitAndExecute;
         [CBA_fnc_globalEvent, [ QGVAR(EH_digital), [ "Ron_RscDigitalClock_layer", false, 2 ] ], 58] call CBA_fnc_waitAndExecute;
+        [{ missionNamespace setVariable [QGVAR(RONinProgress), nil, true] }, [''], 70] call CBA_fnc_waitAndExecute;
     };
     case "WATCH": {
         [CBA_fnc_globalEvent, [ QGVAR(EH_watch), [ "watch_display", [true]                          ] ],  2] call CBA_fnc_waitAndExecute;
@@ -68,11 +69,13 @@ switch (_mode) do {
         [CBA_fnc_globalEvent, [ QGVAR(EH_watch), [ "watch_fade",    ["FROMBLACK",    "OVERLAY", 14] ] ], 31] call CBA_fnc_waitAndExecute;
         [CBA_fnc_globalEvent, [ QGVAR(EH_watch), [ "watch_fade",    ["FROMBLACK", "BACKGROUND", 10] ] ], 45] call CBA_fnc_waitAndExecute;
         [CBA_fnc_globalEvent, [ QGVAR(EH_watch), [ "watch_display", [true]                          ] ], 60] call CBA_fnc_waitAndExecute;
+        
+        [{ missionNamespace setVariable [QGVAR(RONinProgress), nil, true] }, [''], 70] call CBA_fnc_waitAndExecute;
     };
     case "NONE": {
         [CBA_fnc_globalEvent, [ QGVAR(EH_basic_fade), [ "TOBLACK",   14 ] ], 15] call CBA_fnc_waitAndExecute;
         [CBA_fnc_globalEvent, [ QGVAR(EH_basic_fade), [ "FROMBLACK", 14 ] ], 31] call CBA_fnc_waitAndExecute;
+        [{ missionNamespace setVariable [QGVAR(RONinProgress), nil, true] }, [''], 40] call CBA_fnc_waitAndExecute;
     };
 };
 
-[{ missionNamespace setVariable [QGVAR(RONinProgress), nil, true] }, [''], 90] call CBA_fnc_waitAndExecute;
