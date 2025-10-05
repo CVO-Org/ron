@@ -2,6 +2,12 @@
 <Project name="ron">
     <Package name="ron">
         <Container name="CBA_Settings">
+            <Key ID="str_ron_core_set_condition_didRonRecently">
+                <English>Enable Did Ron Recently Check</English>
+            </Key>
+            <Key ID="str_ron_core_set_condition_didRonRecently_desc">
+                <English>When disabled, will ignore the cooldown after previous RON.</English>
+            </Key>
             <Key ID="str_ron_core_set_disableUserInput">
                 <English>Disable User Inputs</English>
             </Key>
@@ -130,8 +136,11 @@
             <Key ID="str_ron_core_set_cat_2mode">
                 <English>2. Mode</English>
             </Key>
-            <Key ID="str_ron_core_set_cat_3Condition">
-                <English>3. Condition</English>
+            <Key ID="str_ron_core_set_cat_31Condition">
+                <English>3.1 Condition Checks</English>
+            </Key>
+            <Key ID="str_ron_core_set_cat_32Condition">
+                <English>3.2 Condition</English>
             </Key>
             <Key ID="str_ron_core_set_cat_4Interruption">
                 <English>4. Interruption</English>
