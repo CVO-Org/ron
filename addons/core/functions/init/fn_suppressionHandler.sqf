@@ -42,12 +42,12 @@ addMissionEventHandler [
 ];
 
 
-// Broadcast updated QPVAR(suppress_inContact) state only when the state changes
+// Broadcast updated QPVAR(condition_inContact) state only when the state changes
 [{
     private _delta = missionNamespace getVariable [QSET(suppress_supressed_cooldown), 300];
     private _newState = (PVAR(suppress_lastSuppressed) + _delta) > CBA_missionTime;
-    private _previousState = missionNamespace getVariable [QPVAR(suppress_inContact), false];
-    if (_previousState isNotEqualTo _newState) then { missionNamespace setVariable [QPVAR(suppress_inContact), _newState, true] };
+    private _previousState = missionNamespace getVariable [QPVAR(condition_inContact), false];
+    if (_previousState isNotEqualTo _newState) then { missionNamespace setVariable [QPVAR(condition_inContact), _newState, true] };
 
 }, 5, []] call CBA_fnc_addPerFrameHandler;
 
