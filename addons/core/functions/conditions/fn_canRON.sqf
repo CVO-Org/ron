@@ -34,7 +34,7 @@ private _canRON = true;
 if ( missionNamespace getVariable [QPVAR(suppress_gotInterrupted), false] isEqualTo true ) exitWith { systemChat "Make sure there is no threat first!"; false };
 
 // Didnt RON recently....
-if ( SET(condition_didRonRecently) && { missionNamespace getVariable [QPVAR(condition_didRONRecently), false] } ) then { _canRON = false; systemChat "You already did RON!" };
+if ( missionNamespace getVariable [QPVAR(condition_didRONRecently), false] ) then { _canRON = false; systemChat "You already did RON!" };
 
 
 // Not in contact (based on suppressed Eventhandler)
