@@ -42,11 +42,18 @@ if (_interrupted) then {
 
     skipTime (_timeToSkip - 0.75);
 
-    if (SET(condition_cooldown)) then {
+
+    if (SET(condition_didRONRecently)) then {
         missionNamespace setVariable [QPVAR(condition_didRONRecently), true, true];
-        [ { missionNamespace setVariable [QPVAR(condition_didRONRecently), false, true]; } , [], 60*60] call CBA_fnc_waitAndExecute;
+        [
+            { missionNamespace setVariable [QPVAR(condition_didRONRecently), false, true]; },
+            [],
+            60*60
+        ] call CBA_fnc_waitAndExecute;
     };
 };
+
+
 
 [ CBA_fnc_globalEvent , [QGVAR(EH_hint), [_hint]], 25 ] call CBA_fnc_waitAndExecute;
 
