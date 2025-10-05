@@ -47,11 +47,11 @@
     [
         {
             params ["_unit", "_container", "_item", "_slot", "_params"];
-            leader _unit isEqualTo _unit && { [] call FUNC(checkTimeFrame) }
+            _unit call FUNC(action_cond)
         },
         {
             params ["_unit", "_container", "_item", "_slot", "_params"];
-            leader _unit isEqualTo _unit && { [] call FUNC(checkTimeFrame) }
+            _unit call FUNC(action_cond)
         }
     ],
     {

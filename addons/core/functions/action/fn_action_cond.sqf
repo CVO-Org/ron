@@ -16,4 +16,13 @@
 */
 
 params ["_player"];
-leader _player isEqualTo _player && { [] call FUNC(checkTimeFrame) }
+
+isNil QGVAR(RONinProgress)
+&&
+{
+    leader _player isEqualTo _player
+    &&
+    {
+        [] call FUNC(checkTimeFrame)
+    }
+}
