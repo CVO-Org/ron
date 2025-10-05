@@ -49,7 +49,7 @@ private _grps = [];
 _grps = [
     _grps apply { [_x, count units  _x, _pos distance2D leader _x]},
     [],
-    { _x  select  2 },
+    { _x # 2 },
     "ASCEND"
 ] call BIS_fnc_sortBy;
 
@@ -57,13 +57,17 @@ private _maxDistance = SET(interruption_enemy_inner_radius);
 private _totalChance = 0;
 
 {
+    diag_log format ['[CVO](debug)(fn_interrupt_chance) _x: %1', _x];
+
+    diag_log format ['[CVO](debug)(fn_interrupt_chance) _maxDistance: %1', _maxDistance];
+
     private _individual_chance = switch (_forEachIndex) do {
         case 0: {
-            (0.6 * ( (_maxDistance / _x select 2) min 1) ) + linearConversion [2, 8, _x select 1, 0, 0.1, true];
+            (0.6 * ( (_maxDistance / _x # 2) min 1) ) + linearConversion [2, 8, _x # 1, 0, 0.1, true];
         };
 
         default {
-            (0.2 / _forEachIndex) * ( ( ( _maxDistance / _x select 2 ) min 1 ) + linearConversion [2, 8,  _x select 1, 0, 0.1, true] ) ;
+            (0.2 / _forEachIndex) * ( ( ( _maxDistance / _x # 2 ) min 1 ) + linearConversion [2, 8,  _x # 1, 0, 0.1, true] ) ;
         };
     };
     
