@@ -1,8 +1,6 @@
 # RemainOverNight System
 
-[![Steam Subscriptions](https://img.shields.io/steam/subscriptions/3438988923?style=for-the-badge&logo=steam&label=Steam%20Workshop&color=%23690000)](https://steamcommunity.com/sharedfiles/filedetails/?id=3438988923)
-
-[![Discord Invite](https://img.shields.io/discord/1422294842897203200?label=Discord&logo=discord&logoColor=white&style=for-the-badge&color=darkgreen "Join Andx & Zorns Mods Discord")](https://discord.gg/ag4v6kxYAa)
+[![Steam Subscriptions](https://img.shields.io/steam/subscriptions/3438988923?style=for-the-badge&logo=steam&label=Steam%20Workshop&color=%23690000)](https://steamcommunity.com/sharedfiles/filedetails/?id=3438988923) [![Discord Invite](https://img.shields.io/discord/1422294842897203200?label=Discord&logo=discord&logoColor=white&style=for-the-badge&color=darkgreen "Join Andx & Zorns Mods Discord")](https://discord.gg/ag4v6kxYAa)
 
 
 This mod provides the players with a system that allows them to initialises a Remain Over Night Time Skip themselves, no Zeus shenanigans needed.
