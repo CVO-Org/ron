@@ -14,7 +14,7 @@ QSET(test) -> "ADDON_set_test"
 
 [
     QSET(interruption_enabled),                //    _setting     - Unique setting name. Matches resulting variable name <STRING>
-    "CHECKBOX",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
+    "CHECKBOX",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER", "COLOR" or "TIME" <STRING>
     SETLSTRING(enable),
                                             //    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
     [LSTRING(set_cat_main), LSTRING(set_cat_4Interruption)],                //    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
@@ -27,7 +27,7 @@ QSET(test) -> "ADDON_set_test"
 
 [
     QSET(interruption_chance_min),                //    _setting     - Unique setting name. Matches resulting variable name <STRING>
-    "SLIDER",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
+    "SLIDER",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER", "COLOR" or "TIME" <STRING>
     SETLSTRING(interruption_chance_min),
                                             //    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
     [LSTRING(set_cat_main), LSTRING(set_cat_4Interruption)],
@@ -41,7 +41,7 @@ QSET(test) -> "ADDON_set_test"
 
 [
     QSET(interruption_chance_max),                //    _setting     - Unique setting name. Matches resulting variable name <STRING>
-    "SLIDER",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
+    "SLIDER",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER", "COLOR" or "TIME" <STRING>
     SETLSTRING(interruption_chance_max),
                                             //    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
     [LSTRING(set_cat_main), LSTRING(set_cat_4Interruption)],                //    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
@@ -54,7 +54,7 @@ QSET(test) -> "ADDON_set_test"
 
 [
     QSET(interruption_enemy_outer_radius),                //    _setting     - Unique setting name. Matches resulting variable name <STRING>
-    "SLIDER",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
+    "SLIDER",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER", "COLOR" or "TIME" <STRING>
     SETLSTRING(interruption_enemy_outer_radius),
                                             //    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
     [LSTRING(set_cat_main), LSTRING(set_cat_4Interruption)],                //    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
@@ -69,7 +69,7 @@ QSET(test) -> "ADDON_set_test"
 PVAR(interruption_enemy_sides) = [];
 [
     QSET(interruption_enemy_side_east),        //    _setting     - Unique setting name. Matches resulting variable name <STRING>
-    "CHECKBOX",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
+    "CHECKBOX",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER", "COLOR" or "TIME" <STRING>
     SETLSTRING(interruption_enemy_side_east),
                                             //    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
     [LSTRING(set_cat_main), LSTRING(set_cat_4Interruption)],                //    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
@@ -88,7 +88,7 @@ PVAR(interruption_enemy_sides) = [];
 
 [
     QSET(interruption_enemy_side_west),        //    _setting     - Unique setting name. Matches resulting variable name <STRING>
-    "CHECKBOX",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
+    "CHECKBOX",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER", "COLOR" or "TIME" <STRING>
     SETLSTRING(interruption_enemy_side_west),
                                             //    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
     [LSTRING(set_cat_main), LSTRING(set_cat_4Interruption)],                //    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
@@ -107,7 +107,7 @@ PVAR(interruption_enemy_sides) = [];
 
 [
     QSET(interruption_enemy_side_guer),        //    _setting     - Unique setting name. Matches resulting variable name <STRING>
-    "CHECKBOX",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
+    "CHECKBOX",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER", "COLOR" or "TIME" <STRING>
     SETLSTRING(interruption_enemy_side_guer),
                                             //    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
     [LSTRING(set_cat_main), LSTRING(set_cat_4Interruption)],                //    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
@@ -129,7 +129,7 @@ PVAR(interruption_enemy_sides) = [];
 PVAR(interruption_enemy_size) = [3, 10];
 [
     QSET(interruption_enemy_size_min),        //    _setting     - Unique setting name. Matches resulting variable name <STRING>
-    "SLIDER",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
+    "SLIDER",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER", "COLOR" or "TIME" <STRING>
     SETLSTRING(interruption_enemy_size_min),
                                             //    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
     [LSTRING(set_cat_main), LSTRING(set_cat_4Interruption)],                //    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
@@ -144,7 +144,7 @@ PVAR(interruption_enemy_size) = [3, 10];
 
 [
     QSET(interruption_enemy_size_max),        //    _setting     - Unique setting name. Matches resulting variable name <STRING>
-    "SLIDER",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
+    "SLIDER",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER", "COLOR" or "TIME" <STRING>
     SETLSTRING(interruption_enemy_size_max),
                                             //    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
     [LSTRING(set_cat_main), LSTRING(set_cat_4Interruption)],                //    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
@@ -159,7 +159,7 @@ PVAR(interruption_enemy_size) = [3, 10];
 
 [
     QSET(interruption_enemy_classes),        //    _setting     - Unique setting name. Matches resulting variable name <STRING>
-    "EDITBOX",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
+    "EDITBOX",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER", "COLOR" or "TIME" <STRING>
     SETLSTRING(interruption_enemy_classes),
                                             //    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
     [LSTRING(set_cat_main), LSTRING(set_cat_4Interruption)],                //    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
@@ -176,7 +176,7 @@ PVAR(interruption_enemy_size) = [3, 10];
 
 [
     QSET(timeFrame_Mode),        //    _setting     - Unique setting name. Matches resulting variable name <STRING>
-    "LIST",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
+    "LIST",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER", "COLOR" or "TIME" <STRING>
     SETLSTRING(timeFrame_Mode),
                                             //    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
     [LSTRING(set_cat_main), LSTRING(set_cat_2mode)],                //    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
@@ -190,7 +190,7 @@ PVAR(interruption_enemy_size) = [3, 10];
 
 [
     QSET(displayMode),                        //    _setting     - Unique setting name. Matches resulting variable name <STRING>
-    "LIST",                                    //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
+    "LIST",                                    //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER", "COLOR" or "TIME" <STRING>
     SETLSTRING(displayMode),
                                             //    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
     [LSTRING(set_cat_main), LSTRING(set_cat_1general)],                //    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
@@ -202,7 +202,7 @@ PVAR(interruption_enemy_size) = [3, 10];
 
 [
     QSET(disableUserInput),        //    _setting     - Unique setting name. Matches resulting variable name <STRING>
-    "CHECKBOX",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
+    "CHECKBOX",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER", "COLOR" or "TIME" <STRING>
     SETLSTRING(disableUserInput),
                                             //    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
     [LSTRING(set_cat_main), LSTRING(set_cat_1general)],                //    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>

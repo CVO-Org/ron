@@ -14,7 +14,7 @@ QSET(test) -> "ADDON_set_test"
 
 [
     QSET(condition_didRonRecently),             //    _setting     - Unique setting name. Matches resulting variable name <STRING>
-    "CHECKBOX",                                 //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
+    "CHECKBOX",                                 //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER", "COLOR" or "TIME" <STRING>
     SETLSTRING(condition_didRonRecently),
                                                 //    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
     [LSTRING(set_cat_main), LSTRING(set_cat_31Condition)],                //    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
@@ -27,7 +27,7 @@ QSET(test) -> "ADDON_set_test"
 
 [
     QSET(interruption_location_types),          //    _setting     - Unique setting name. Matches resulting variable name <STRING>
-    "EDITBOX",                                  //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
+    "EDITBOX",                                  //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER", "COLOR" or "TIME" <STRING>
     SETLSTRING(interruption_location_types),
                                                 //    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
     [LSTRING(set_cat_main), LSTRING(set_cat_32Condition)],                //    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
@@ -42,7 +42,7 @@ QSET(test) -> "ADDON_set_test"
 
 [
     QSET(interruption_location_distance),        //    _setting     - Unique setting name. Matches resulting variable name <STRING>
-    "SLIDER",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
+    "SLIDER",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER", "COLOR" or "TIME" <STRING>
     SETLSTRING(interruption_location_distance),
                                             //    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
     [LSTRING(set_cat_main), LSTRING(set_cat_32Condition)],                //    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
@@ -55,7 +55,7 @@ QSET(test) -> "ADDON_set_test"
 
 [
     QSET(suppress_supressed_cooldown),        //    _setting     - Unique setting name. Matches resulting variable name <STRING>
-    "SLIDER",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
+    "SLIDER",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER", "COLOR" or "TIME" <STRING>
     SETLSTRING(suppress_supressed_cooldown),
                                             //    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
     [LSTRING(set_cat_main), LSTRING(set_cat_32Condition)],                //    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
@@ -68,7 +68,7 @@ QSET(test) -> "ADDON_set_test"
 
 [
     QSET(interruption_enemy_inner_radius),        //    _setting     - Unique setting name. Matches resulting variable name <STRING>
-    "SLIDER",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
+    "SLIDER",                                //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER", "COLOR" or "TIME" <STRING>
     SETLSTRING(interruption_enemy_inner_radius),
                                             //    _title       - Display name or display name + tooltip (optional, default: same as setting name) <STRING, ARRAY>
     [LSTRING(set_cat_main), LSTRING(set_cat_32Condition)],                //    _category    - Category for the settings menu + optional sub-category <STRING, ARRAY>
