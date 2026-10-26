@@ -15,7 +15,7 @@
 * Public: No
 */
 
-if !(isServer) exitWith { };
+// runs on every machine - the blacklist is read on the client (fn_canRON), the overwrite on the server (fn_interrupt_chance)
 
 private _oldMap = missionNamespace getVariable ["vn_ron_blacklist_playerDistance", nil];
 private _newMap = missionNamespace getVariable ["ron_api_blacklist_playerDistance", nil];
@@ -29,7 +29,5 @@ switch (true) do {
 private _oldOverwrite = missionNamespace getVariable ["vn_ron_interruption_overwrite", nil];
 private _newOverwrite = missionNamespace getVariable ["ron_api_interruption_overwrite", nil];
 
-switch (true) do {
-    case (!isNil "_oldOverwrite" && { (!isNil "_newOverwrite") }): { _newMap merge [_oldMap, false] };
-    case (!isNil "_oldOverwrite" && { ( isNil "_newOverwrite") }): { missionNamespace setVariable ["ron_api_interruption_overwrite", _oldOverwrite]; };
-};
+// when both are defined, the new overwrite takes precedence
+if (!isNil "_oldOverwrite" && { isNil "_newOverwrite" }) then { missionNamespace setVariable ["ron_api_interruption_overwrite", _oldOverwrite]; };

@@ -43,7 +43,7 @@ private _pos = getPos _requester;
 
 // get unique groups
 private _grps = [];
-[_pos, east, SET(interruption_enemy_outer_radius)] call FUNC(nearbyUnits) apply { _grps pushBackUnique group _x };
+[_pos, PVAR(interruption_enemy_sides), SET(interruption_enemy_outer_radius)] call FUNC(nearbyUnits) apply { _grps pushBackUnique group _x };
 
 // Array of groups, their size, their distance, sorted by distance
 _grps = [
@@ -57,10 +57,6 @@ private _maxDistance = SET(interruption_enemy_inner_radius);
 private _totalChance = 0;
 
 {
-    diag_log format ['[CVO](debug)(fn_interrupt_chance) _x: %1', _x];
-
-    diag_log format ['[CVO](debug)(fn_interrupt_chance) _maxDistance: %1', _maxDistance];
-
     private _individual_chance = switch (_forEachIndex) do {
         case 0: {
             (0.6 * ( (_maxDistance / _x # 2) min 1) ) + linearConversion [2, 8, _x # 1, 0, 0.1, true];

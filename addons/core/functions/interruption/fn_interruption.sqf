@@ -29,6 +29,9 @@ switch (_interruption_type) do {
 */
 
 
+// no enemy side selected in the CBA settings - nothing to spawn
+if (PVAR(interruption_enemy_sides) isEqualTo []) exitWith { WARNING("Interruption skipped - no enemy side selected in the CBA settings"); };
+
 private _classNames = PVAR(interruption_enemy_classes);
 private _side = selectRandom PVAR(interruption_enemy_sides);
 PVAR(interruption_enemy_size) params ["_size_min", "_size_max"];
@@ -48,9 +51,6 @@ private _waypoint_distance = linearConversion [0,1,random 1, 10, 50];
 private _pos_enemy_Spawn = _ronPosition getPos [_enemy_distance, _enemy_direction];
 private _pos_waypoint =    _ronPosition getPos [_waypoint_distance, _waypoint_direction];
 private _pos_destination = _ronPosition getPos [_destination_distance, _destination_direction];
-
-
-private _grp = createGroup [_side, true];
 
 
 private _classes = [];
