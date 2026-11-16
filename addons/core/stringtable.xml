@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ron">
-    <Package name="ron">
+    <Package name="core">
         <Container name="CBA_Settings">
             <Key ID="str_ron_core_set_condition_didRonRecently">
                 <English>Enable Did Ron Recently Check</English>
