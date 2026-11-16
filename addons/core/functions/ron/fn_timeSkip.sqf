@@ -40,7 +40,8 @@ if (_interrupted) then {
     
     _hint = "Its time to get ready...";
 
-    skipTime (_timeToSkip - 0.75);
+    // never skip backwards when the target time is less than 45 minutes away
+    skipTime ( 0 max (_timeToSkip - 0.75) );
 
 
     if (SET(condition_didRONRecently)) then {
